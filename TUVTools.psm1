@@ -65,9 +65,8 @@ param(
     #$sb1="OU=_Users,OU=Locations,OU=US-GRC,DC=us001,DC=itgr,DC=net"
     $results=Get-ADcomputer -Filter {created -gt $date} -Properties created, description | 
         select name, created, description, distinguishedname, objectguid
-    $results
+    Write-Output $results
 
-    
 }
 
 
